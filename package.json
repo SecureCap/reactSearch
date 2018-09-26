@@ -1,7 +1,7 @@
 {
   "name": "reactSearch",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "repository": "git@github.com:SecureCap/reactSearch.git",
   "author": "Secure Cap <Twilliams397tw@gmail.com>",
   "license": "MIT",

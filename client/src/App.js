@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// Include the Main React Dependencies
+// var React = require("react");
+import React from "react";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+// var ReactDOM = require("react-dom");
+import ReactDOM from "react-dom";
 
-export default App;
+// Implementing very simple routing for single-page app.
+import { BrowserRouter, Route } from "react-router-dom";
+
+
+// Include the main Main Component
+// var Main = require("./components/Main");
+import Main from "./components/Main";
+
+// This code here allows us to render our main component (in this case Main)
+// ReactDOM.render(<Main />, document.getElementById("app"));
+
+// Render main route.
+ReactDOM.render(
+	(
+		<BrowserRouter>
+			<Route path="/" component={Main} />
+		</BrowserRouter>
+	),
+	document.getElementById("app")
+);
