@@ -5,6 +5,12 @@
   "repository": "git@github.com:SecureCap/reactSearch.git",
   "author": "Secure Cap <Twilliams397tw@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "npm run clean && npm run compile",
+    "clean": "rm -rf ./build/index.bundle.js",
+    "compile": "NODE_ENV=production webpack --config ./webpack.config.js --progress"
+  },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.2",
