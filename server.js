@@ -19,12 +19,12 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static("./public"));
 
 // Import routes and give the server access to them.
-var routes = require("../controllers/app_controller.js");
+var routes = require("./controllers/app_controller.js");
 app.use("/", routes);
 
 // -------------------------------------------------
 
-var databaseUri = 'mongodb://localhost/NyTDB';
+var databaseUri = 'mongodb://localhost/mernNewsDb';
 
 if (process.env.MONGODB_URI) {
   // this executes if being executed in Heroku App
@@ -53,3 +53,4 @@ var port = process.env.PORT || 8080; // trying this for heroku
 app.listen(port, function() {
   console.log("App running on port 8080!");
 });
+
